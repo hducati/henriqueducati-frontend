@@ -5,12 +5,12 @@ import { MenuLinks } from "#/common/components/menu-links/menu-links"
 
 export const Navbar = (): React.ReactElement => {
   const [isOpen, setIsOpen] = useState(false)
-  
+
   const onToggle = () => setIsOpen(!isOpen)
 
   return (
     <NavbarContainer>
-      <MenuToggle isOpen={isOpen} onToggle={onToggle}/>
+      <MenuToggle isOpen={isOpen} onToggle={onToggle} />
       <MenuLinks isOpen={isOpen} />
     </NavbarContainer>
   )

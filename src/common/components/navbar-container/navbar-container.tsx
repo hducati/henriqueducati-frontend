@@ -1,7 +1,10 @@
 import { NavbarContainerProps } from "#/common/components/navbar-container/types"
 import { Flex } from "@chakra-ui/react"
 
-export const NavbarContainer = ({ children, ...props }: NavbarContainerProps): React.ReactElement => {
+export const NavbarContainer = ({
+  children,
+  ...props
+}: NavbarContainerProps): React.ReactElement => {
   return (
     <Flex
       as="nav"
@@ -10,8 +13,8 @@ export const NavbarContainer = ({ children, ...props }: NavbarContainerProps): R
       w="100%"
       mb={8}
       p={8}
-      bg={["purple.500", "purple.500", "transparent", "transparent"]}
-      color={["white", "white", "purple.600", "purple.600"]}
+      bg={["purple.500", "purple.500", "purple.500", "purple.500"]}
+      color={["white", "white", "white", "white"]}
       {...props}
     >
       {children}
