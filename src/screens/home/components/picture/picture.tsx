@@ -1,14 +1,16 @@
-import { Img } from "@chakra-ui/react"
+import { Box, Img } from "@chakra-ui/react"
 
 export const Picture = (): React.ReactElement => {
   return (
-    <Img
-      borderRadius="full"
-      boxSize={{ base: "80px", md: "140px" }}
-      alignItems="center"
-      loading="lazy"
-      src="https://bit.ly/dan-abramov"
-      alt="Henrique Ducati"
-    />
+    <Box display="flex" justifyContent="center">
+      <Img
+        borderRadius="full"
+        boxSize="140px"
+        alignSelf="center"
+        loading="lazy"
+        src="https://bit.ly/dan-abramov"
+        alt="Henrique Ducati"
+      />
+    </Box>
   )
 }
