@@ -6,7 +6,7 @@ function Index(props: HomeProps) {
   return <HomeScreen {...props} />
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const { person, projects } = await getHomeData()
 
   return {

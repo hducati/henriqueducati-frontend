@@ -1,7 +1,4 @@
 const getEnv = (productionEnvTempName: string): string => {
-  if (process.env.NODE_ENV === "production") {
-    return productionEnvTempName
-  }
   return process.env[productionEnvTempName] as string
 }
 
