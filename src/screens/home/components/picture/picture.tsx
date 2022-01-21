@@ -1,6 +1,7 @@
 import { Box, Img } from "@chakra-ui/react"
+import { PictureProps } from "#/screens/home/components/picture/types"
 
-export const Picture = (): React.ReactElement => {
+export const Picture = ({ url }: PictureProps): React.ReactElement => {
   return (
     <Box display="flex" justifyContent="center">
       <Img

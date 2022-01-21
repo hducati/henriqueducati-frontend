@@ -8,7 +8,7 @@ export const ProfileSection = ({
 }: ProfileSectionProps): React.ReactElement => {
   return (
     <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "20% 1fr" }} gap={4}>
-      <Picture />
+      <Picture url={person.image.url} />
       <Flex
         align={{ base: "center", md: "flex-start" }}
         direction="column"
@@ -16,7 +16,7 @@ export const ProfileSection = ({
         px={{ md: 4 }}
       >
         <HeadingSystem>{`I'm ${person.name}`}</HeadingSystem>
-        <Text mt={2} ml={{ md: 2 }} isTruncated>
+        <Text mt={2} ml={{ md: 2 }}>
           {`${person.role} - located in ${person.country}, ${person.state}, ${person.city}`}
         </Text>
       </Flex>

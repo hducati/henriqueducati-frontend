@@ -14,11 +14,20 @@ const GET_HOME_DATA = gql`
         url
       }
     }
+    projects {
+      name
+      shortDescription
+      description
+      visibility
+      image {
+        url
+      }
+    }
   }
 `
 
 export async function getHomeData() {
-  const { person } = await graphQL.request(GET_HOME_DATA)
+  const { person, projects } = await graphQL.request(GET_HOME_DATA)
 
-  return person
+  return { person, projects }
 }
