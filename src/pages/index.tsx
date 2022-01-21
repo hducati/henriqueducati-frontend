@@ -7,11 +7,12 @@ function Index(props: HomeProps) {
 }
 
 export async function getStaticProps() {
-  const person = await getHomeData()
+  const { person, projects } = await getHomeData()
 
   return {
     props: {
-      person: person
+      person: person,
+      projects: projects
     }
   }
 }
