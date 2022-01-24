@@ -1,3 +1,5 @@
+import { SocialMediaType } from "#/graphql/types/social-media"
+
 export type PersonType = {
   name: string
   about: string
@@ -8,4 +10,5 @@ export type PersonType = {
   image: {
     url: string
   }
+  social_medias: SocialMediaType[]
 }
