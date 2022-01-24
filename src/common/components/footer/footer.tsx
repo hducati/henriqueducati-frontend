@@ -9,7 +9,7 @@ const FooterElement = ({ social_medias }: FooterProps): React.ReactElement => {
 
   return (
     <Flex
-      p={4}
+      p={2}
       as="footer"
       bg={"purple.500"}
       color={"white"}
