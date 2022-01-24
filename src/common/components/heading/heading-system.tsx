@@ -6,7 +6,7 @@ export const HeadingSystem = ({
   ...props
 }: HeadingSystemProps): React.ReactElement => {
   return (
-    <Heading fontSize={{ base: "1.2rem", md: "1.8rem" }} isTruncated {...props}>
+    <Heading fontSize={{ base: "1.6rem", md: "1.8rem" }} isTruncated {...props}>
       {children}
     </Heading>
   )
