@@ -12,9 +12,9 @@ export const NavbarContainer = ({
       wrap="wrap"
       w="100%"
       mb={8}
-      p={8}
-      bg={["purple.500", "purple.500", "purple.500", "purple.500"]}
-      color={["white", "white", "white", "white"]}
+      p={6}
+      bg={"purple.500"}
+      color={"white"}
       {...props}
     >
       {children}

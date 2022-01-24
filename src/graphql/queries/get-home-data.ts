@@ -22,6 +22,11 @@ const GET_HOME_DATA = gql`
       image {
         url
       }
+      stack {
+        language
+        tools
+        databases
+      }
     }
   }
 `
