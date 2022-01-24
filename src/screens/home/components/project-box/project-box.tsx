@@ -9,12 +9,14 @@ import {
 } from "@chakra-ui/react"
 import { ProjectBoxProps } from "#/screens/home/components/project-box/types"
 import { BadgeSystem } from "#/common/components/badge/badge-system"
+import { StackBox } from "../stack-box/stack-box"
 
 export const ProjectBox = ({
   name,
   shortDescription,
   description,
-  visibility
+  visibility,
+  stack
 }: ProjectBoxProps): React.ReactElement => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
@@ -81,7 +83,9 @@ export const ProjectBox = ({
         description={description}
         isOpen={isOpen}
         onClose={onClose}
-      />
+      >
+        <StackBox {...stack} />
+      </ModalSystem>
     </Flex>
   )
 }
