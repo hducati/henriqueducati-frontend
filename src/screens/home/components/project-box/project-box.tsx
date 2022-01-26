@@ -7,24 +7,25 @@ import {
   Button,
   useDisclosure
 } from "@chakra-ui/react"
-import { ProjectBoxProps } from "#/screens/home/components/project-box/types"
 import { BadgeSystem } from "#/common/components/badge/badge-system"
 import { StackBox } from "../stack-box/stack-box"
+import { ProjectType } from "#/graphql/types/project"
 
 export const ProjectBox = ({
   name,
   shortDescription,
   description,
   visibility,
+  image,
   stack
-}: ProjectBoxProps): React.ReactElement => {
+}: ProjectType): React.ReactElement => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   const renderPicture = (): React.ReactElement => (
     <Img
       boxSize={{ base: "18rem", md: "12rem" }}
       loading="lazy"
-      src="https://bit.ly/dan-abramov"
+      src={`${process.env.NEXT_PUBLIC_REACT_APP_IMAGE_BASE_URL}${image.url}`}
       alt={`picture-${name}`}
       alignSelf="center"
       borderRadius="0.4rem"

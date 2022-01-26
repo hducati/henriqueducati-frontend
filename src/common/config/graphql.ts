@@ -1,4 +1,5 @@
-import { BACKEND_URL } from "#/env/index"
 import { GraphQLClient } from "graphql-request"
 
-export const graphQL = new GraphQLClient(BACKEND_URL)
+export const graphQL = new GraphQLClient(
+  process.env.NEXT_PUBLIC_GRAPHQL_ENDPOINT as string
+)

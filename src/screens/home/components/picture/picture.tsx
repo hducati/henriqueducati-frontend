@@ -9,7 +9,7 @@ export const Picture = ({ url }: PictureProps): React.ReactElement => {
         boxSize="140px"
         alignSelf="center"
         loading="lazy"
-        src="https://bit.ly/dan-abramov"
+        src={`${process.env.NEXT_PUBLIC_REACT_APP_IMAGE_BASE_URL}${url}`}
         alt="Henrique Ducati"
       />
     </Box>

@@ -1,5 +1,5 @@
-import { ProjectBoxProps } from "#/screens/home/components/project-box/types"
+import { ProjectType } from "#/graphql/types/project"
 
 export type ProjectsListProps = {
-  projects: ProjectBoxProps[]
+  initialProjects: ProjectType[]
 }
