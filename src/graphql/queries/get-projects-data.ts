@@ -1,5 +1,7 @@
-import { graphQL } from "#/common/config/graphql"
 import { gql } from "graphql-request"
+
+import { graphQL } from "#/common/config/graphql"
+import { ProjectType } from "#/graphql/types/project"
 
 const GET_PROJECTS_DATA = gql`
   query GetProjectsData {
@@ -20,8 +22,8 @@ const GET_PROJECTS_DATA = gql`
   }
 `
 
-export async function getProjectsData() {
+export async function getProjectsData(): Promise<Array<ProjectType>> {
   const { projects } = await graphQL.request(GET_PROJECTS_DATA)
 
-  return projects
+  return projects as Array<ProjectType>
 }

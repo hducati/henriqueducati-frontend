@@ -1,22 +1,21 @@
 import type { AppProps } from "next/app"
 import { ChakraProvider } from "@chakra-ui/react"
 import { Global } from "@emotion/react"
-import Head from "next/head"
+import { QueryClientProvider, QueryClient } from "react-query"
+import { ReactQueryDevtools } from "react-query/devtools"
 
 import { globalStyles } from "#/styles/global"
 
+const queryClient = new QueryClient()
+
 function App({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider>
-      <Head key="application-head">
-        <title>My website</title>
-        <meta
-          name="description"
-          content="My personal website built with Next.Js, GraphQL, Chakra UI"
-        />
-      </Head>
+    <ChakraProvider resetCSS>
       <Global styles={globalStyles} />
-      <Component {...pageProps} />
+      <QueryClientProvider client={queryClient}>
+        <Component {...pageProps} />
+        <ReactQueryDevtools initialIsOpen />
+      </QueryClientProvider>
     </ChakraProvider>
   )
 }

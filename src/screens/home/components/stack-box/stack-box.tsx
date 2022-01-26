@@ -1,11 +1,11 @@
 import { Text, Flex } from "@chakra-ui/react"
-import { StackBoxProps } from "#/screens/home/components/stack-box/types"
+import { StackType } from "#/graphql/types/stack"
 
 export const StackBox = ({
   language,
   tools,
   databases
-}: StackBoxProps): React.ReactElement => {
+}: StackType): React.ReactElement => {
   return (
     <Flex direction="column" gap={2} py={2}>
       <Text>Programming Language: {language}</Text>

@@ -1,7 +1,7 @@
 import { VisibilityEnum } from "#/screens/home/enums/visibility-enum"
-import { StackBoxProps } from "#/screens/home/components/stack-box/types"
+import { StackType } from "#/graphql/types/stack"
 
-export type ProjectBoxProps = {
+export type ProjectType = {
   name: string
   shortDescription: string
   description: string
@@ -9,5 +9,5 @@ export type ProjectBoxProps = {
   image: {
     url: string
   }
-  stack: StackBoxProps
+  stack: StackType
 }

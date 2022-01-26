@@ -3,14 +3,11 @@ import { HomeProps } from "#/screens/home/types/home-props"
 import { ProjectsList } from "./components/projects-list/projects-list"
 import { Base } from "#/templates/base/base"
 
-export const HomeScreen = ({
-  person,
-  projects
-}: HomeProps): React.ReactElement => {
+export const HomeScreen = ({ person }: HomeProps): React.ReactElement => {
   return (
     <Base social_medias={person.social_medias}>
       <ProfileSection person={person} />
-      <ProjectsList projects={projects} />
+      <ProjectsList />
     </Base>
   )
 }

@@ -8,11 +8,12 @@ export const MenuLinks = ({ isOpen }: MenuLinksProps): React.ReactElement => {
     <Box
       display={{ base: isOpen ? "block" : "none", md: "block" }}
       flexBasis={{ base: "100%", md: "auto" }}
+      px={8}
     >
       <Stack
         spacing={16}
         align="center"
-        justify={["center", "space-between", "flex-end", "flex-end"]}
+        justify={["center", "center", "flex-end", "flex-end"]}
         direction={["column", "row", "row", "row"]}
         pt={[4, 4, 0, 0]}
       >
