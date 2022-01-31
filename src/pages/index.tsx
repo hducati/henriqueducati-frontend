@@ -1,14 +1,14 @@
 import { getPersonData } from "#/graphql/queries/get-person-data"
 import { getProjectsData } from "#/graphql/queries/get-projects-data"
 import { HomeScreen } from "#/screens/home/home"
-import { HomeProps } from "#/screens/home/types/home-props"
+import { GetStaticProps } from "next"
 import { dehydrate, QueryClient } from "react-query"
 
-function Index(props: HomeProps) {
-  return <HomeScreen {...props} />
+function Index() {
+  return <HomeScreen />
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const queryClient = new QueryClient()
 
   await queryClient.prefetchQuery("person", getPersonData)
