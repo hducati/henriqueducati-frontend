@@ -1,11 +1,13 @@
+import { usePerson } from "#/hooks/use-person"
 import { Box, Flex, HStack, Text, VStack } from "@chakra-ui/react"
-import { FooterProps } from "#/common/components/footer/types"
 import Image from "next/image"
 import Link from "next/link"
 import React from "react"
 
-const FooterElement = ({ socialMedias }: FooterProps): React.ReactElement => {
-  const hasSocialMedias = !!socialMedias
+const FooterElement = (): React.ReactElement => {
+  const { data } = usePerson()
+
+  const hasSocialMedias = !!data?.social_medias
 
   return (
     <Flex
@@ -21,7 +23,7 @@ const FooterElement = ({ socialMedias }: FooterProps): React.ReactElement => {
         {hasSocialMedias && <Text fontSize="xl">Follow me on:</Text>}
         <HStack>
           {hasSocialMedias
-            ? socialMedias.map((socialMedia) => (
+            ? data.social_medias.map((socialMedia) => (
                 <Box
                   key={`box-${socialMedia.social_media_category.name}`}
                   cursor="pointer"

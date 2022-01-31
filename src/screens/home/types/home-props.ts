@@ -1,5 +1,5 @@
-import { PersonType } from "#/graphql/types/person"
+import { DehydratedState } from "react-query"
 
 export type HomeProps = {
-  person: PersonType
+  dehydratedState: DehydratedState
 }
