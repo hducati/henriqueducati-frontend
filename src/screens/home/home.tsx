@@ -5,7 +5,7 @@ import { Base } from "#/templates/base/base"
 
 export const HomeScreen = ({ person }: HomeProps): React.ReactElement => {
   return (
-    <Base social_medias={person.social_medias}>
+    <Base socialMedias={person.social_medias}>
       <ProfileSection person={person} />
       <ProjectsList />
     </Base>

@@ -4,8 +4,8 @@ import Image from "next/image"
 import Link from "next/link"
 import React from "react"
 
-const FooterElement = ({ social_medias }: FooterProps): React.ReactElement => {
-  const hasSocialMedias = !!social_medias
+const FooterElement = ({ socialMedias }: FooterProps): React.ReactElement => {
+  const hasSocialMedias = !!socialMedias
 
   return (
     <Flex
@@ -21,18 +21,18 @@ const FooterElement = ({ social_medias }: FooterProps): React.ReactElement => {
         {hasSocialMedias && <Text fontSize="xl">Follow me on:</Text>}
         <HStack>
           {hasSocialMedias
-            ? social_medias.map((social_media) => (
+            ? socialMedias.map((socialMedia) => (
                 <Box
-                  key={`box-${social_media.social_media_category.name}`}
+                  key={`box-${socialMedia.social_media_category.name}`}
                   cursor="pointer"
                 >
-                  <Link href={social_media.link} passHref>
+                  <Link href={socialMedia.link} passHref>
                     <a>
                       <Image
-                        src={`${process.env.NEXT_PUBLIC_REACT_APP_IMAGE_BASE_URL}${social_media.social_media_category.icon.url}`}
+                        src={`${process.env.NEXT_PUBLIC_REACT_APP_IMAGE_BASE_URL}${socialMedia.social_media_category.icon.url}`}
                         width={52}
                         height={46}
-                        alt={social_media.social_media_category.name}
+                        alt={socialMedia.social_media_category.name}
                       />
                     </a>
                   </Link>
