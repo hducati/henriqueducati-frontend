@@ -1,4 +1,5 @@
 import { SocialMediaType } from "#/graphql/types/social-media"
+import { TechnologyExperience } from "#/graphql/types/technology"
 
 export type PersonType = {
   name: string
@@ -11,4 +12,5 @@ export type PersonType = {
     url: string
   }
   social_medias: SocialMediaType[]
+  technology_experiences: TechnologyExperience[]
 }

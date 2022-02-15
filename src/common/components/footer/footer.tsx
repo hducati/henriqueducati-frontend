@@ -12,15 +12,18 @@ const FooterElement = (): React.ReactElement => {
   return (
     <Flex
       p={2}
+      mt={6}
       as="footer"
-      bg={"purple.500"}
+      bg={"primary"}
       color={"white"}
       align="center"
       justify="center"
       w="100%"
     >
       <VStack spacing={2}>
-        {hasSocialMedias && <Text fontSize="xl">Follow me on:</Text>}
+        {hasSocialMedias && (
+          <Text fontSize="xl">Keep connected with my work:</Text>
+        )}
         <HStack>
           {hasSocialMedias
             ? data.social_medias.map((socialMedia) => (

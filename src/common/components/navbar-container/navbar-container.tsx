@@ -13,8 +13,7 @@ export const NavbarContainer = ({
       w="100%"
       mb={8}
       p={6}
-      bg={"purple.500"}
-      color={"white"}
+      color={"black"}
       {...props}
     >
       {children}

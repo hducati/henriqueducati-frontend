@@ -44,7 +44,7 @@ export const ProjectBox = ({
       <Text
         fontSize={{ base: "1.2rem", md: "1rem" }}
         fontWeight="bold"
-        color="purple.800"
+        color="darkPurple"
         isTruncated
       >
         {name}

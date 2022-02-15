@@ -7,22 +7,25 @@ import { useState } from "react"
 
 import { globalStyles } from "#/styles/global"
 import { Layout } from "#/common/components/layout/layout"
+import { customTheme } from "#/styles/theme"
 
 function App({ Component, pageProps }: AppProps) {
   const [queryClient] = useState(() => new QueryClient())
 
   return (
-    <ChakraProvider resetCSS>
+    <>
       <Global styles={globalStyles} />
-      <QueryClientProvider client={queryClient}>
-        <Hydrate state={pageProps.dehydratedState}>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
-          <ReactQueryDevtools initialIsOpen />
-        </Hydrate>
-      </QueryClientProvider>
-    </ChakraProvider>
+      <ChakraProvider theme={customTheme} resetCSS>
+        <QueryClientProvider client={queryClient}>
+          <Hydrate state={pageProps.dehydratedState}>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+            <ReactQueryDevtools initialIsOpen />
+          </Hydrate>
+        </QueryClientProvider>
+      </ChakraProvider>
+    </>
   )
 }
 
