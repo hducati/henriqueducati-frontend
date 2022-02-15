@@ -24,6 +24,15 @@ const GET_PERSON_DATA = gql`
           }
         }
       }
+      technology_experiences {
+        years
+        technology {
+          name
+          icon {
+            url
+          }
+        }
+      }
     }
   }
 `

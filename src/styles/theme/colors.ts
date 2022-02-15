@@ -1,6 +1,14 @@
 export const colors = {
-  primary: "#9900cc",
-  lightPurple: "#c61aff",
-  white: "#FAFAFA",
-  lightBg: "#F2F2F2"
+  colorMode: {
+    default: "black",
+    _dark: "white"
+  },
+  primary: {
+    default: "purple.500",
+    _dark: "white"
+  },
+  darkPurple: {
+    default: "purple.800",
+    _dark: "white"
+  }
 }

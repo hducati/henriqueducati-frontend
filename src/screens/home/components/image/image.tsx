@@ -1,7 +1,7 @@
 import { Box, Img } from "@chakra-ui/react"
-import { PictureProps } from "#/screens/home/components/picture/types"
+import { ImageProps } from "#/screens/home/components/image/types"
 
-export const Picture = ({ url }: PictureProps): React.ReactElement => {
+export const Image = ({ url, alt }: ImageProps): React.ReactElement => {
   return (
     <Box display="flex" justifyContent="center">
       <Img
@@ -10,7 +10,7 @@ export const Picture = ({ url }: PictureProps): React.ReactElement => {
         alignSelf="center"
         loading="lazy"
         src={`${process.env.NEXT_PUBLIC_REACT_APP_IMAGE_BASE_URL}${url}`}
-        alt="Henrique Ducati"
+        alt={alt}
       />
     </Box>
   )

@@ -1,4 +1,5 @@
 import { css } from "@emotion/react"
+import { fonts } from "#/styles/theme/fonts"
 
 export const globalStyles = css`
   @font-face {
@@ -37,5 +38,10 @@ export const globalStyles = css`
     &::after {
       box-sizing: inherit;
     }
+  }
+
+  body {
+    font-family: ${fonts.main}
+    background-color: #5b6e16;
   }
 `

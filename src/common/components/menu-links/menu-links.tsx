@@ -18,7 +18,7 @@ export const MenuLinks = ({ isOpen }: MenuLinksProps): React.ReactElement => {
         pt={[4, 4, 0, 0]}
       >
         <MenuItem to="/">Home</MenuItem>
-        <MenuItem to="/">About</MenuItem>
+        <MenuItem to="/about">About</MenuItem>
       </Stack>
     </Box>
   )

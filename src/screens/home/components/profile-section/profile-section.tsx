@@ -1,6 +1,6 @@
 import { Flex, Grid, Text } from "@chakra-ui/react"
 
-import { Picture } from "#/screens/home/components/picture/picture"
+import { Image } from "#/screens/home/components/image/image"
 import { HeadingSystem } from "#/common/components/heading/heading-system"
 import { usePerson } from "#/hooks/use-person"
 
@@ -16,7 +16,7 @@ export const ProfileSection = (): React.ReactElement => {
           templateColumns={{ base: "repeat(1, 1fr)", md: "20% 1fr" }}
           gap={4}
         >
-          <Picture url={person.image.url} />
+          <Image url={person.image.url} alt={person.name} />
           <Flex
             align={{ base: "center", md: "flex-start" }}
             direction="column"
