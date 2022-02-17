@@ -7,7 +7,6 @@ import {
   Button,
   useDisclosure
 } from "@chakra-ui/react"
-import { BadgeSystem } from "#/common/components/badge/badge-system"
 import { StackBox } from "../stack-box/stack-box"
 import { ProjectType } from "#/graphql/types/project"
 
@@ -15,7 +14,6 @@ export const ProjectBox = ({
   name,
   shortDescription,
   description,
-  visibility,
   image,
   stack
 }: ProjectType): React.ReactElement => {
@@ -40,7 +38,6 @@ export const ProjectBox = ({
       mt={4}
       justify={{ base: "center", lg: "flex-start" }}
     >
-      <BadgeSystem mr={6} text={visibility} />
       <Text
         fontSize={{ base: "1.2rem", md: "1rem" }}
         fontWeight="bold"

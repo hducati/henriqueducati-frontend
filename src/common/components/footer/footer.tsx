@@ -1,4 +1,5 @@
 import { usePerson } from "#/hooks/use-person"
+import { gradient } from "#/styles/theme/gradient"
 import { Box, Flex, HStack, Text, VStack } from "@chakra-ui/react"
 import Image from "next/image"
 import Link from "next/link"
@@ -14,7 +15,7 @@ const FooterElement = (): React.ReactElement => {
       p={2}
       mt={6}
       as="footer"
-      bg={"primary"}
+      bgGradient={gradient.primary}
       color={"white"}
       align="center"
       justify="center"

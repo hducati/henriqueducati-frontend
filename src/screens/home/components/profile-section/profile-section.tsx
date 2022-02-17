@@ -24,8 +24,10 @@ export const ProfileSection = (): React.ReactElement => {
             px={{ md: 4 }}
           >
             <HeadingSystem>{`I'm ${person.name}`}</HeadingSystem>
-            <Text mt={2} ml={{ md: 2 }}>
-              {`${person.role} - located in ${person.country}, ${person.state}, ${person.city}`}
+            <Text mt={2} ml={{ md: 2 }} color="gray">
+              {`${person.role} at Vizir Software Studio`}
+              <br />
+              {`${person.country} - ${person.state}, ${person.city}`}
             </Text>
           </Flex>
         </Grid>

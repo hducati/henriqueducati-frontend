@@ -41,7 +41,6 @@ export const globalStyles = css`
   }
 
   body {
-    font-family: ${fonts.main}
-    background-color: #5b6e16;
+    font-family: ${fonts.main};
   }
 `
