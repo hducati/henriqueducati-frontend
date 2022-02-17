@@ -7,8 +7,9 @@ export const AboutScreen = (): React.ReactElement => {
 
   return (
     <Flex flexDirection="column" height="100vh" alignItems="center">
-      {isLoading && <Loader />}
-      {!isLoading && (
+      {isLoading ? (
+        <Loader />
+      ) : (
         <Box dangerouslySetInnerHTML={{ __html: person!.about }} />
       )}
     </Flex>

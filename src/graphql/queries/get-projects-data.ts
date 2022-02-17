@@ -13,6 +13,8 @@ const GET_PROJECTS_DATA = gql`
       image {
         url
       }
+      websiteUrl
+      repositoryUrl
       stack {
         language
         tools

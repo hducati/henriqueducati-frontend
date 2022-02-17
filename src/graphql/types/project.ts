@@ -10,4 +10,6 @@ export type ProjectType = {
     url: string
   }
   stack: StackType
+  websiteUrl: string
+  repositoryUrl: string
 }

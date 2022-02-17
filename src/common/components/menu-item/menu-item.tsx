@@ -1,16 +1,15 @@
-import { Link, Text } from "@chakra-ui/react"
+import NextLink from "next/link"
+
 import { MenuItemProps } from "#/common/components/menu-item/types"
+import * as S from "#/common/components/menu-item/styles"
 
 export const MenuItem = ({
   children,
-  to = "/",
-  ...rest
+  to = "/"
 }: MenuItemProps): React.ReactElement => {
   return (
-    <Link href={to}>
-      <Text display="block" {...rest}>
-        {children}
-      </Text>
-    </Link>
+    <NextLink href={to}>
+      <S.MenuLink>{children}</S.MenuLink>
+    </NextLink>
   )
 }
