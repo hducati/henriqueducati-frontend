@@ -4,8 +4,8 @@ import { graphQL } from "#/common/config/graphql"
 import { ProjectType } from "#/graphql/types/project"
 
 const GET_PROJECTS_DATA = gql`
-  query GetProjectsData {
-    projects {
+  query GetProjectsData($limit: Int!) {
+    projects(limit: $limit) {
       name
       shortDescription
       description
@@ -25,7 +25,8 @@ const GET_PROJECTS_DATA = gql`
 `
 
 export async function getProjectsData(): Promise<Array<ProjectType>> {
-  const { projects } = await graphQL.request(GET_PROJECTS_DATA)
+  const variables = { limit: 6 }
+  const { projects } = await graphQL.request(GET_PROJECTS_DATA, variables)
 
   return projects as Array<ProjectType>
 }

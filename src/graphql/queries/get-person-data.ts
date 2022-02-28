@@ -4,8 +4,8 @@ import { graphQL } from "#/common/config/graphql"
 import { PersonType } from "#/graphql/types/person"
 
 const GET_PERSON_DATA = gql`
-  query GetPersonData {
-    person(id: 1) {
+  query GetPersonData($id: ID!) {
+    person(id: $id) {
       name
       about
       country
@@ -38,7 +38,8 @@ const GET_PERSON_DATA = gql`
 `
 
 export async function getPersonData(): Promise<PersonType> {
-  const { person } = await graphQL.request(GET_PERSON_DATA)
+  const variables = { id: 1 }
+  const { person } = await graphQL.request(GET_PERSON_DATA, variables)
 
   return person as PersonType
 }

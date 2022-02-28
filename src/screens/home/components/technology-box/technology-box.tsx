@@ -1,6 +1,6 @@
 import { Technology } from "#/graphql/types/technology"
 import { Flex, Heading } from "@chakra-ui/react"
-import { Image } from "../image/image"
+import { Image } from "#/screens/home/components/image/image"
 
 export const TechnologyBox = ({
   name,

@@ -13,6 +13,7 @@ export const NavbarContainer = ({
       w="100%"
       mb={8}
       p={6}
+      justify="space-between"
       color={"black"}
       {...props}
     >

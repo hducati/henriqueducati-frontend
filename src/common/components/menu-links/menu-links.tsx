@@ -16,6 +16,7 @@ export const MenuLinks = ({ isOpen }: MenuLinksProps): React.ReactElement => {
         justify={["center", "center", "flex-end", "flex-end"]}
         direction={["column", "row", "row", "row"]}
         pt={[4, 4, 0, 0]}
+        color="colorMode"
       >
         <MenuItem to="/">Home</MenuItem>
         <MenuItem to="/about">About</MenuItem>
