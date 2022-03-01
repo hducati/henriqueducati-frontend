@@ -11,7 +11,7 @@ export const TechnologiesList = (): React.ReactElement => {
     <Box>
       <HeadingSystem my={6}>Technologies</HeadingSystem>
       <Text fontSize={{ base: "1rem", md: "1.2rem" }}>
-        Below are some of the technologies that I have some experience
+        Below are some of the technologies that I have experience
       </Text>
       <Grid
         mt={6}
