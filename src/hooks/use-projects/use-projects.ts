@@ -1,12 +1,8 @@
 import { milliseconds, oneMinute } from "#/constants/stale-time"
 import { getProjectsData } from "#/graphql/queries/get-projects-data"
 import { ProjectType } from "#/graphql/types/project"
-import { useQuery, UseQueryResult } from "react-query"
-
-type ProjectsResult<TData = ProjectType[], TError = unknown> = UseQueryResult<
-  TData,
-  TError
->
+import { useQuery } from "react-query"
+import { ProjectsResult } from "#/hooks/use-projects/types"
 
 export const GET_PROJECTS_KEY = "projects"
 

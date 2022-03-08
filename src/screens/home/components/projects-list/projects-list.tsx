@@ -3,7 +3,7 @@ import { Flex, Grid, IconButton, Text } from "@chakra-ui/react"
 import { FiChevronDown, FiChevronUp } from "react-icons/fi"
 
 import { HeadingSystem } from "#/common/components/heading/heading-system"
-import { useProjects } from "#/hooks/use-projects"
+import { useProjects } from "#/hooks/use-projects/use-projects"
 import { ProjectBox } from "#/screens/home/components/project-box/project-box"
 import { Loader } from "#/common/components/loader/loader"
 import { usePagination } from "#/hooks/use-pagination/use-pagination"
