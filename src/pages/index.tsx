@@ -4,7 +4,7 @@ import { dehydrate, QueryClient } from "react-query"
 import { getPersonData } from "#/graphql/queries/get-person-data"
 import { getProjectsData } from "#/graphql/queries/get-projects-data"
 import { GET_PERSON_KEY } from "#/hooks/use-person"
-import { GET_PROJECTS_KEY } from "#/hooks/use-projects"
+import { GET_PROJECTS_KEY } from "#/hooks/use-projects/use-projects"
 import { HomeScreen } from "#/screens/home/home"
 
 function Index() {
