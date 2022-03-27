@@ -35,7 +35,7 @@ const FooterElement = (): React.ReactElement => {
                   <Link href={socialMedia.link} passHref>
                     <a>
                       <Image
-                        src={`${process.env.NEXT_PUBLIC_REACT_APP_IMAGE_BASE_URL}${socialMedia.social_media_category.icon.url}`}
+                        src={`${socialMedia.social_media_category.icon.url}`}
                         width={52}
                         height={46}
                         alt={socialMedia.social_media_category.name}

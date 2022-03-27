@@ -9,7 +9,7 @@ export const Image = ({ url, alt }: ImageProps): React.ReactElement => {
         boxSize="140px"
         alignSelf="center"
         loading="lazy"
-        src={`${process.env.NEXT_PUBLIC_REACT_APP_IMAGE_BASE_URL}${url}`}
+        src={`${url}`}
         alt={alt}
       />
     </Box>

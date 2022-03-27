@@ -23,7 +23,7 @@ export const ProjectBox = ({
     <Img
       boxSize={{ base: "18rem", md: "12rem" }}
       loading="lazy"
-      src={`${process.env.NEXT_PUBLIC_REACT_APP_IMAGE_BASE_URL}${image.url}`}
+      src={`${image.url}`}
       alt={`picture-${name}`}
       alignSelf="center"
       borderRadius="0.4rem"
