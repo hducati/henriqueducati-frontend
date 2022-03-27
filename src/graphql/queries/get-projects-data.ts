@@ -27,7 +27,5 @@ const GET_PROJECTS_DATA = gql`
 export async function getProjectsData(): Promise<Array<ProjectType>> {
   const { projects } = await graphQL.request(GET_PROJECTS_DATA)
 
-  console.log(projects)
-
   return projects as Array<ProjectType>
 }

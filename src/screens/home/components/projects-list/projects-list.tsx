@@ -16,17 +16,19 @@ export const ProjectsList = (): React.ReactElement => {
   const [filteredProjects, setFilteredProjects] = useState<ProjectType[]>([])
   const [initialProjects, setInitialProjects] = useState<ProjectType[]>([])
   const [endOfPagination, setEndOfPagination] = useState<boolean>(true)
+  const [hasItemsToScroll, setHasItemsToScroll] = useState<boolean>(false)
 
   const { data, isLoading } = useProjects()
 
   useEffect(() => {
-    const { firstElements, paginatedList, endOfPagination } =
+    const { firstElements, paginatedList, endOfPagination, hasItemsToScroll } =
       // eslint-disable-next-line react-hooks/rules-of-hooks
       usePagination<ProjectType>(data as ProjectType[], page)
 
     setFilteredProjects([...paginatedList])
     setInitialProjects([...firstElements])
     setEndOfPagination(endOfPagination)
+    setHasItemsToScroll(hasItemsToScroll)
   }, [data, page])
 
   const renderLoaderWhenLoading = (): React.ReactElement => <Loader />
@@ -47,25 +49,27 @@ export const ProjectsList = (): React.ReactElement => {
             : mapProjects(initialProjects)}
         </Grid>
 
-        <Flex alignItems="center" justify="center">
-          {endOfPagination ? (
-            <IconButton
-              colorScheme="purple"
-              aria-label="Chevron up to show less projects"
-              icon={<FiChevronUp />}
-              onClick={() => setPage(page - 1)}
-              my={4}
-            />
-          ) : (
-            <IconButton
-              colorScheme="purple"
-              aria-label="Chevron down to show more projects"
-              icon={<FiChevronDown />}
-              onClick={() => setPage(page + 1)}
-              my={4}
-            />
-          )}
-        </Flex>
+        {hasItemsToScroll && (
+          <Flex alignItems="center" justify="center">
+            {endOfPagination ? (
+              <IconButton
+                colorScheme="purple"
+                aria-label="Chevron up to show less projects"
+                icon={<FiChevronUp />}
+                onClick={() => setPage(page - 1)}
+                my={4}
+              />
+            ) : (
+              <IconButton
+                colorScheme="purple"
+                aria-label="Chevron down to show more projects"
+                icon={<FiChevronDown />}
+                onClick={() => setPage(page + 1)}
+                my={4}
+              />
+            )}
+          </Flex>
+        )}
       </React.Fragment>
     )
   }

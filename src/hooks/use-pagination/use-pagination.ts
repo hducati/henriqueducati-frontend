@@ -13,14 +13,20 @@ export function usePagination<T = unknown[]>(list: T[], page = 1, limit = 6) {
   const indexOfLastElement = list.lastIndexOf(list[list.length - 1])
 
   const endOfPagination = isEndOfPagination(indexOfLastElement, endAt)
+  const hasItemsToScroll = hasMoreThanSixItems(list)
 
   return {
     firstElements,
     paginatedList,
-    endOfPagination
+    endOfPagination,
+    hasItemsToScroll
   }
 }
 
 function isEndOfPagination(lastIndex: number, endAt: number) {
   return endAt > lastIndex
+}
+
+function hasMoreThanSixItems<T = unknown[]>(list: T[]) {
+  return list.length > 6
 }
