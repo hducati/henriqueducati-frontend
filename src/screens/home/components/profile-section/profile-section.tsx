@@ -25,7 +25,7 @@ export const ProfileSection = (): React.ReactElement => {
           >
             <HeadingSystem>{`I'm ${person.name}`}</HeadingSystem>
             <Text mt={2} ml={{ md: 2 }} color="gray">
-              {`${person.role} at Vizir Software Studio`}
+              {`${person.role} at Questrade Financial Group`}
               <br />
               {`${person.country} - ${person.state}, ${person.city}`}
             </Text>
